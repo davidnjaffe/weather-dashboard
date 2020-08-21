@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    border: 1px solid red;
+}
+
+.btn {
+    background-color: royalblue;
+    
+}
+.btn:hover {
+    background-color: sandybrown;
+    border-color: sandybrown;
+}
