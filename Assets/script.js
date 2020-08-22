@@ -31,7 +31,7 @@ function buildQueryUrl(cityName) {
     //=============== pulls UV index data ====================
 function getUVindex(lat, lon) {
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=e64e132275b7b750665db42aefe9b9f8&lat=" +
+    "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=e64e132275b7b750665db42aefe9b9f8&lat=" +
     lat +
     "&lon=" +
     lon +
@@ -100,16 +100,16 @@ function buildForecast(cityName) {
       console.log(response.list[i]);
       
         
-      var card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
-      var cardBody = $("<div>").addClass("card-body p-3 forecastBody")
+      var card = $("<div>").addClass("card col-md-2  bg-primary text-white");
+      var cardBody = $("<div>").addClass("card-body forecastBody")
       var cityDate = $("<h6>").addClass("card-title").text(response.list[i].dt_txt);
-      var temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature:" + response.list[i].main.temp + "°F");
-      var humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity" + response.list[1].main.humidity + "%");
-      // var image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + results[i].weather[0].icon + ".png")
+      var temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature:" + " " + response.list[i].main.temp + "°F");
+      var humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity" + " " + response.list[1].main.humidity + "%");
+      var weatherIcon = $("#weather-icon").attr("src","https://openweathermap.org/img/w/" + response.list[0].weather[0].icon +".png");
 
-        cardBody.append(cityDate, temperature, humidity);
+        cardBody.append(cityDate, weatherIcon, temperature, humidity);
         card.append(cardBody);
-        $("#forecast").empty();
+        // $("#forecast").empty();
         $("#forecast").append(card);
       }
     }
