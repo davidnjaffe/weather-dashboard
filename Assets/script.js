@@ -79,6 +79,7 @@ function getUVindex(lat, lon) {
 
 function buildForecast(cityName) {
   $("#CitySearch").val("");
+  $("#forecast").empty();
 
   var queryURL =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -109,8 +110,8 @@ function buildForecast(cityName) {
 
         cardBody.append(cityDate, weatherIcon, temperature, humidity);
         card.append(cardBody);
-        // $("#forecast").empty();
         $("#forecast").append(card);
+        
       }
     }
 
