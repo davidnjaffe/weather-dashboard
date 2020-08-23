@@ -3,7 +3,7 @@ h1 {
 }
 
 div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .btn {
@@ -13,4 +13,20 @@ div {
 .btn:hover {
     background-color: sandybrown;
     border-color: sandybrown;
+}
+
+#current-weather{
+    background-color: #eaecef;
+}
+
+#currents {
+
+    background-color: blue;
+}
+#current-header{
+    color:white;
+}
+
+#search-block{
+    border: 2px solid #eaecef
 }

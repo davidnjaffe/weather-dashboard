@@ -29,7 +29,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="search-block">
           <h4>Search for City</h4>
           <form class="form-inline my-2 my-lg-0">
             <input
@@ -42,12 +42,12 @@
             <button class="btn btn-secondary my-2 my-sm-0" id= "search-btn" type="search">
               Search
             </button>
-            <ul class="mr-5 mt-2" id="search-history"></ul>
+            <ul class="saveList" id="search-history"></ul>
           </form>
         </div>
         <!-- CURRENT CONDITIONS -->
-        <div class="col-md-8">
-          <h4>Current Conditions</h4>
+        <div class="col-md-8" id="currents">
+          <h4 id="current-header">Current Conditions</h4>
           <div class="row" id="current-weather">
             <div class="col-md-12">
               <h4><span id="current-city"></span></h4>
@@ -62,66 +62,6 @@
             </div>
           </div>
 
-
-
-
-
-
-
-          <!-- <h4>5 Day Forecast: </h4> -->
-
-         
-                    
-                       <!-- <div class="card-deck">
-                        <div class="card bg-primary">
-                            <div id="day1" class="card-body p-2">
-                                    <h6 class="card-date"></h6>
-                                    <img class = "weather-icon">
-                                    </a><p class = "weather-temp"></p>
-                                    <p class = "weather-humidity"></p>
-
-                            </div>
-                        </div>
-                        <div class="card bg-primary">
-                            <div id="day2" class="card-body p-2">
-                                    <h6 class="card-date"></h6>
-                                    <img class = "weather-icon">
-                                    <p class = "weather-temp"></p>
-                                    <p class = "weather-humidity"></p>
-
-                            </div>
-                        </div>
-                        <div class="card bg-primary">
-                            <div id="day3" class="card-body p-2">
-                                    <h6 class="card-date"></h6>
-                                    <img class = "weather-icon">
-                                    <p class = "weather-temp"></p>
-                                    <p class = "weather-humidity"></p>
-
-                            </div>
-
-                        </div>
-                        <div class="card bg-primary">
-                            <div id="day4-" class=" card-body p-2">
-                                    <h6 class="card-date"></h6>
-                                    <img class = "weather-icon">
-                                    <p class = "weather-temp"></p>
-                                    <p class = "weather-humidity"></p>
-
-                            </div>
-                        </div>
-                        <div class="card bg-primary">
-                            <div id="day5" class="card-body p-2">
-                                    <h6 class="date"></h6>
-                                    <img class = "icon">
-                                    <p class = "temp"></p>
-                                    <p class = "humidity"></p>
-                                    <p class = "uvIndex"></p>
-                            </div>
-                        </div>
-                        </div>
-                    
-                </div> -->
         </div>
         <div class="mt-4 col-md-12"> 
 

@@ -5,7 +5,15 @@ $("#search-btn").on("click", function (event) {
   console.log(CityInput);
   buildQueryUrl(CityInput);
   buildForecast(CityInput)
+  makeList();
 });
+
+
+function makeList() {
+  CityInput = $("#CitySearch").val();
+  CityList = $("<li>").addClass("list-group-item").text(CityInput);
+  $(".saveList").append(CityList);
+}
 
 function buildQueryUrl(cityName) {
   $("#CitySearch").val("");
@@ -101,19 +109,19 @@ function buildForecast(cityName) {
       console.log(response.list[i]);
       
         
-      var card = $("<div>").addClass("card col-md-2  bg-primary text-white");
+      var card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
       var cardBody = $("<div>").addClass("card-body forecastBody")
       var cityDate = $("<h6>").addClass("card-title").text(response.list[i].dt_txt);
       var temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature:" + " " + response.list[i].main.temp + "°F");
-      var humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity" + " " + response.list[1].main.humidity + "%");
-      var weatherIcon = $("#weather-icon").attr("src","https://openweathermap.org/img/w/" + response.list[0].weather[0].icon +".png");
+      var humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity" + " " + response.list[i].main.humidity + "%");
+      var weatherIcon = $("<img>").attr("src","https://openweathermap.org/img/w/" + response.list[i].weather[0].icon +".png");
 
         cardBody.append(cityDate, weatherIcon, temperature, humidity);
         card.append(cardBody);
         $("#forecast").append(card);
         
       }
-    }
+    }s
 
   
   });
